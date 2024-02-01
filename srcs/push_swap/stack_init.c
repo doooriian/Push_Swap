@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/01 09:19:14 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/01 09:30:32 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,32 @@ static long	ft_atol(const char *str)
 	return (nbr * sign);
 }
 
-void	stack_init(t_stack_node **a, char **argv)
+static void	append_node(t_stack_node **stack, int nbr)
+{
+	t_stack_node	*node;
+	t_stack_node	*last_node;
+
+	if (!stack)
+		return ;
+	node = malloc(sizeof(t_stack_node));
+	if (!node)
+		return ;
+	node->next = NULL;
+	node->nbr = nbr;
+	if (!(*stack))
+	{
+		node->prev = NULL;
+		*stack = node;
+	}
+	else
+	{
+		last_node = find_last_node(*stack);
+		last_node->next = node;
+		node->prev = last_node;
+	}
+}
+
+void	stack_init(t_stack_node **stack_a, char **argv)
 {
 	long	nbr;
 	int		i;
@@ -44,13 +69,13 @@ void	stack_init(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(a);
+			free_errors(stack_a);
 		nbr = ft_atol(argv[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
-			free_errors(a);
-		if (error_duplicate(*a, (int)nbr))
-			free_errors(a);
-		append_node(a, (int)nbr);
+			free_errors(stack_a);
+		if (error_duplicate(*stack_a, (int)nbr))
+			free_errors(stack_a);
+		append_node(stack_a, (int)nbr);
 		i++;
 	}
 }
