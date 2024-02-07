@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 19:41:25 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/07 20:05:06 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ void	stack_init(t_stack_node **stack_a, char **argv, bool argc_is_2)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(stack_a);
+			free_errors(stack_a, argv, argc_is_2);
 		nbr = ft_atol(argv[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
-			free_errors(stack_a);
+			free_errors(stack_a, argv, argc_is_2);
 		if (error_repetition(*stack_a, (int)nbr))
-			free_errors(stack_a);
+			free_errors(stack_a, argv, argc_is_2);
 		append_node(stack_a, (int)nbr);
 		i++;
 	}
