@@ -6,11 +6,26 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:29:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 19:04:45 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/07 19:40:36 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	free_new_argv(char **new_argv)
+{
+	int	i;
+
+	i = 0;
+	if (!new_argv || !*new_argv)
+		return ;
+	while (new_argv[i])
+	{
+		free(new_argv[i]);
+		i++;
+	}
+	free(new_argv);
+}
 
 void	free_stack(t_stack_node **stack)
 {

@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 18:28:06 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/07 19:41:25 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,5 @@ void	stack_init(t_stack_node **stack_a, char **argv, bool argc_is_2)
 		i++;
 	}
 	if (argc_is_2)
-		free_split(argv);
+		free_new_argv(argv);
 }
