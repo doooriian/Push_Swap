@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:32:37 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 16:46:20 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/08 13:56:18 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,32 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 		return ;
 	tmp = *src;
 	*src = (*src)->next;
-	tmp->next = *dst;
-	*dst = tmp;
+	if (*src)
+		(*src)->prev = NULL;
+	tmp->prev = NULL;
+	if (!(*dst))
+	{
+		*dst = tmp;
+		(*dst)->next = NULL;
+	}
+	else
+	{
+		tmp->next = *dst;
+		(*dst)->prev = tmp;
+		*dst = tmp;
+	}
 }
 
-void	pa(t_stack_node **stack_a, t_stack_node **stack_b, bool check)
+void	pa(t_stack_node **a, t_stack_node **b, bool check)
 {
-	push(stack_a, stack_b);
+	push(a, b);
 	if (check)
 		write(1, "pa\n", 3);
 }
 
-void	pb(t_stack_node **stack_a, t_stack_node **stack_b, bool check)
+void	pb(t_stack_node **a, t_stack_node **b, bool check)
 {
-	push(stack_b, stack_a);
+	push(b, a);
 	if (check)
 		write(1, "pb\n", 3);
 }

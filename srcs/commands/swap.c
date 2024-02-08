@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:33:26 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 16:48:15 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/08 13:49:13 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ static void	swap(t_stack_node **stack)
 	*stack = (*stack)->next;
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
+	(*stack)->prev = NULL;
+	tmp->prev = *stack;
+	if (tmp->next)
+		tmp->next->prev = tmp;
 }
 
 void	sa(t_stack_node **a, bool check)
