@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:45 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:56:25 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 18:05:14 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	push_a_to_b(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
 
-	cheapest_node = set_cheapest(*a);
+	cheapest_node = return_cheapest(*a);
 	if (cheapest_node->above_median && cheapest_node->target_node->above_median)
 		rotate_both(a, b, cheapest_node);
 	else if (!(cheapest_node->above_median)
