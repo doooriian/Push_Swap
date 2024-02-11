@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:56:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:55:30 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 18:07:25 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack_node
 void			free_new_argv(char **new_argv);
 void			free_stack(t_stack_node **stack);
 void			free_error(t_stack_node **stack_a, char **argv, bool argc_is_2);
-void			error_syntax(char *str_nbr);
+int				error_syntax(char *str_nbr);
 int				error_repetition(t_stack_node *stack_a, int nbr);
 
 void			init_stack_a(t_stack_node **a, char **argv, bool argc_is_2);
