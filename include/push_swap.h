@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:56:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/01 08:58:30 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 14:45:24 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 typedef struct s_stack_node
 {
 	int					nbr;
-	int					index;
+	int					current_position;
 	int					push_cost;
 	bool				above_median;
 	bool				cheapest;

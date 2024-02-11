@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 20:05:06 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:05:46 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	append_node(t_stack_node **stack, int nbr)
 	}
 }
 
-void	stack_init(t_stack_node **stack_a, char **argv, bool argc_is_2)
+void	init_stack_a(t_stack_node **stack_a, char **argv, bool argc_is_2)
 {
 	long	nbr;
 	int		i;
@@ -80,4 +80,39 @@ void	stack_init(t_stack_node **stack_a, char **argv, bool argc_is_2)
 	}
 	if (argc_is_2)
 		free_new_argv(argv);
+}
+
+t_stack_node	*return_cheapest(t_stack_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
+
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+				char stack_name)
+{
+	while (*stack != top_node)
+	{
+		if (stack_name == 'a')
+		{
+			if (top_node->above_median)
+				ra(stack, false);
+			else
+				rra(stack, false);
+		}
+		else if (stack_name == 'b')
+		{
+			if (top_node->above_median)
+				rb(stack, false);
+			else
+				rrb(stack, false);
+		}
+	}
 }

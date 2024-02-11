@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:14:41 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 14:29:03 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:21:19 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_stack_node	*find_last_node(t_stack_node *stack)
 	return (stack);
 }
 
-t_stack_node	*find_smallest(t_stack_node *stack)
+t_stack_node	*find_dodo(t_stack_node *stack)
 {
 	t_stack_node	*smallest;
 
@@ -37,17 +37,20 @@ t_stack_node	*find_smallest(t_stack_node *stack)
 	return (smallest);
 }
 
-t_stack_node	*return_cheapest(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
+	t_stack_node	*biggest;
+
 	if (!stack)
 		return (NULL);
+	biggest = stack;
 	while (stack)
 	{
-		if (stack->cheapest)
-			return (stack);
+		if (stack->nbr > biggest->nbr)
+			biggest = stack;
 		stack = stack->next;
 	}
-	return (NULL);
+	return (biggest);
 }
 
 int	stack_len(t_stack_node *stack)
