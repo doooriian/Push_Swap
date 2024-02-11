@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sort_stacks_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:45 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:21:42 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:25 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static void	rotate_both(t_stack_node **a, t_stack_node **b,
 					t_stack_node *cheapest_node)

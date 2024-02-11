@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:43 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 16:56:57 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:12 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 void	set_current_position(t_stack_node *stack)
 {

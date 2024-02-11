@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:29:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 20:04:03 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:57 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 void	free_new_argv(char **new_argv)
 {

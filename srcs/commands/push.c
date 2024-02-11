@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:32:37 by dley              #+#    #+#             */
-/*   Updated: 2024/02/08 13:56:18 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:39 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static void	push(t_stack_node **dst, t_stack_node **src)
 {

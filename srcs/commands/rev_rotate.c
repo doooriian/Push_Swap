@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:32:59 by dley              #+#    #+#             */
-/*   Updated: 2024/02/08 13:49:40 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:42 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static void	rev_rotate(t_stack_node **stack)
 {

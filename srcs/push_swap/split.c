@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:43:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/07 19:18:09 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:57:07 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static int	count_words(char const *s, char c)
 {

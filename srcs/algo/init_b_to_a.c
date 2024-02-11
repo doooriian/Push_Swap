@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:31:25 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 16:56:51 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:56:20 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static void	set_target(t_stack_node *a, t_stack_node *b)
 {

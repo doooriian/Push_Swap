@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:14:41 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:21:19 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:57:19 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 t_stack_node	*find_last_node(t_stack_node *stack)
 {
@@ -21,7 +21,7 @@ t_stack_node	*find_last_node(t_stack_node *stack)
 	return (stack);
 }
 
-t_stack_node	*find_dodo(t_stack_node *stack)
+t_stack_node	*find_min(t_stack_node *stack)
 {
 	t_stack_node	*smallest;
 

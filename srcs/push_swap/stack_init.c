@@ -6,11 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:05:46 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 17:57:13 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 static long	ft_atol(const char *str)
 {
