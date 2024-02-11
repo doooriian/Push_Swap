@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:14:41 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:57:19 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 20:21:02 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,42 @@ t_stack_node	*find_last_node(t_stack_node *stack)
 
 t_stack_node	*find_min(t_stack_node *stack)
 {
-	t_stack_node	*smallest;
+	t_stack_node	*min_node;
+	long			min;
 
 	if (!stack)
 		return (NULL);
-	smallest = stack;
+	min = LONG_MAX;
 	while (stack)
 	{
-		if (stack->nbr < smallest->nbr)
-			smallest = stack;
+		if (stack->nbr > min)
+		{	
+			min = stack->nbr;
+			min_node = stack;
+		}
 		stack = stack->next;
 	}
-	return (smallest);
+	return (min_node);
 }
 
 t_stack_node	*find_max(t_stack_node *stack)
 {
-	t_stack_node	*biggest;
+	t_stack_node	*max_node;
+	long			max;
 
 	if (!stack)
 		return (NULL);
-	biggest = stack;
+	max = LONG_MIN;
 	while (stack)
 	{
-		if (stack->nbr > biggest->nbr)
-			biggest = stack;
+		if (stack->nbr > max)
+		{	
+			max = stack->nbr;
+			max_node = stack;
+		}
 		stack = stack->next;
 	}
-	return (biggest);
+	return (max_node);
 }
 
 int	stack_len(t_stack_node *stack)

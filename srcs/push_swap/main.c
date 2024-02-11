@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:07:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:57:01 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 20:20:21 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 		new_argv = ft_split(argv[1], ' ');
 	if (argc == 2)
-		stack_init(&stack_a, new_argv, true);
+		init_stack_a(&stack_a, new_argv, true);
 	else
-		stack_init(&stack_a, argv + 1, false);
+		init_stack_a(&stack_a, argv + 1, false);
 	if (is_sorted(stack_a))
 	{
 		if (stack_len(stack_a) == 2)
 			sa(&stack_a, false);
 		else if (stack_len(stack_a) == 3)
-			sort_3(&stack_a);
+			sort_three(&stack_a);
 		else
-			sort_stack(&stack_a, &stack_b);
+			sort_stacks(&stack_a, &stack_b);
 	}
 	free_stack(&stack_a);
 }

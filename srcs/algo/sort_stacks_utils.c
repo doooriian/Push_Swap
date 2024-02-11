@@ -6,13 +6,13 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:45 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 18:05:14 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 20:19:47 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-static void	rotate_both(t_stack_node **a, t_stack_node **b,
+void	rotate_both(t_stack_node **a, t_stack_node **b,
 					t_stack_node *cheapest_node)
 {
 	while (*b != cheapest_node && *a != cheapest_node->target_node)
@@ -21,7 +21,7 @@ static void	rotate_both(t_stack_node **a, t_stack_node **b,
 	set_current_position(*b);
 }
 
-static void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
+void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
 					t_stack_node *cheapest_node)
 {
 	while (*b != cheapest_node && *a != cheapest_node->target_node)
@@ -30,7 +30,7 @@ static void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
 	set_current_position(*b);
 }
 
-static void	push_a_to_b(t_stack_node **a, t_stack_node **b)
+void	push_a_to_b(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
 
@@ -45,13 +45,13 @@ static void	push_a_to_b(t_stack_node **a, t_stack_node **b)
 	pb(b, a, false);
 }
 
-static void	push_b_to_a(t_stack_node **a, t_stack_node **b)
+void	push_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	prep_for_push(a, (*b)->target_node, 'a');
 	pa(a, b, false);
 }
 
-static void	min_on_top(t_stack_node **a)
+void	min_on_top(t_stack_node **a)
 {
 	while ((*a)->nbr != find_min(*a)->nbr)
 	{

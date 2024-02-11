@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:43 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:56:12 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 20:18:45 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 			current_b = current_b->next;
 		}
 		if (best_target == LONG_MAX)
-			a->target_node = find_smallest(b);
+			a->target_node = find_min(b);
 		else
 			a->target_node = target_node;
 		a = a->next;
@@ -106,6 +106,6 @@ void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 	set_current_position(a);
 	set_current_position(b);
 	set_target_node(a, b);
-	set_price(a, b);
+	set_cost(a, b);
 	set_cheapest(a);
 }

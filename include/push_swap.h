@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:56:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 18:18:55 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/11 20:18:12 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdbool.h>
 # include <limits.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_stack_node
 {
@@ -53,5 +54,26 @@ t_stack_node	*find_max(t_stack_node *stack);
 
 void			sort_three(t_stack_node **a);
 void			sort_stacks(t_stack_node **a, t_stack_node **b);
+
+void			rotate_both(t_stack_node **a, t_stack_node **b,
+					t_stack_node *cheapest_node);
+void			rev_rotate_both(t_stack_node **a, t_stack_node **b,
+					t_stack_node *cheapest_node);
+void			push_a_to_b(t_stack_node **a, t_stack_node **b);
+void			push_b_to_a(t_stack_node **a, t_stack_node **b);
+void			min_on_top(t_stack_node **a);
+
+
+void			sa(t_stack_node **a, bool print);
+void			sb(t_stack_node **b, bool print);
+void			ss(t_stack_node **a, t_stack_node **b, bool print);
+void			ra(t_stack_node **a, bool print);
+void			rb(t_stack_node **b, bool print);
+void			rr(t_stack_node **a, t_stack_node **b, bool print);
+void			rra(t_stack_node **a, bool print);
+void			rrb(t_stack_node **b, bool print);
+void			rrr(t_stack_node **a, t_stack_node **b, bool print);
+void			pa(t_stack_node **a, t_stack_node **b, bool print);
+void			pb(t_stack_node **b, t_stack_node **a, bool print);
 
 #endif
