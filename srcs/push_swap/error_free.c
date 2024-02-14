@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:29:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 18:00:59 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/14 14:16:09 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ void	free_error(t_stack_node **stack_a, char **argv, bool argc_is_2)
 
 int	error_syntax(char *str_nbr)
 {
-	if (!str_nbr || (*str_nbr != '+' && *str_nbr != '-'
-			&& (*str_nbr < '0' || *str_nbr > '9')))
+	if (!str_nbr || ((*str_nbr != '+' || *str_nbr != '-')
+			&& (*str_nbr < '0' && *str_nbr > '9')))
 		return (1);
 	if ((*str_nbr == '+' || *str_nbr == '-')
 		&& (*(str_nbr + 1) < '0' || *(str_nbr + 1) > '9'))

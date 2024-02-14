@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:43:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 17:57:07 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/14 15:10:16 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (words_count + 2));
 	if (!tab)
 		return (NULL);
-	while (words_count >= 0)
+	while (words_count > 0)
 	{
 		tab[i] = get_next_word(s, c);
 		i++;

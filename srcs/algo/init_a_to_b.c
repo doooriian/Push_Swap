@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:43 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 20:18:45 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/14 16:17:10 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	set_current_position(t_stack_node *stack)
 	while (stack)
 	{
 		stack->current_position = i;
-		if (i < median)
+		if (i <= median)
 			stack->above_median = true;
 		else
 			stack->above_median = false;
@@ -39,9 +39,9 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 	t_stack_node	*target_node;
 	long			best_target;
 
-	while (b)
+	while (a)
 	{
-		best_target = LONG_MAX;
+		best_target = LONG_MIN;
 		current_b = b;
 		while (current_b)
 		{
@@ -53,7 +53,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 			}
 			current_b = current_b->next;
 		}
-		if (best_target == LONG_MAX)
+		if (best_target == LONG_MIN)
 			a->target_node = find_min(b);
 		else
 			a->target_node = target_node;
@@ -71,12 +71,19 @@ static void	set_cost(t_stack_node *a, t_stack_node *b)
 	while (a)
 	{
 		a->push_cost = a->current_position;
-		if (a->above_median)
+		if (!(a->above_median))
 			a->push_cost = len_a - (a->current_position);
+		printf("%d\n", a->target_node->nbr);
 		if (a->target_node->above_median)
+		{
+			printf("la\n");
 			a->push_cost += a->target_node->current_position;
+		}
 		else
+		{	
+			printf("la\n");
 			a->push_cost += len_b - (a->target_node->current_position);
+		}
 		a = a->next;
 	}
 }

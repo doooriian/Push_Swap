@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:56:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 20:18:12 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/14 14:22:07 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_stack_node
 {
