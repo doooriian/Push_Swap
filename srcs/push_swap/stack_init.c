@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 09:04:57 by dley              #+#    #+#             */
-/*   Updated: 2024/02/14 16:22:25 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/15 01:19:41 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ static void	append_node(t_stack_node **stack, int nbr)
 	node->nbr = nbr;
 	if (!(*stack))
 	{
-		node->prev = NULL;
 		*stack = node;
+		node->prev = NULL;
 	}
 	else
 	{
@@ -62,6 +62,7 @@ static void	append_node(t_stack_node **stack, int nbr)
 		node->prev = last_node;
 	}
 }
+
 
 void	init_stack_a(t_stack_node **stack_a, char **argv, bool argc_is_2)
 {
