@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:31:25 by dley              #+#    #+#             */
-/*   Updated: 2024/02/11 20:19:29 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 13:35:42 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	set_target(t_stack_node *a, t_stack_node *b)
 	t_stack_node	*target_node;
 	long			best_target;
 
-	while (a)
+	while (b)
 	{
 		best_target = LONG_MAX;
 		current_a = a;

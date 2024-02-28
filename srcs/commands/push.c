@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:32:37 by dley              #+#    #+#             */
-/*   Updated: 2024/02/15 00:44:30 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 13:27:15 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 	tmp->prev = NULL;
 	if (!(*dst))
 	{
-		*dst = tmp;
 		tmp->next = NULL;
+		*dst = tmp;
 	}
 	else
 	{
@@ -43,7 +43,7 @@ void	pa(t_stack_node **a, t_stack_node **b, bool check)
 		write(1, "pa\n", 3);
 }
 
-void	pb(t_stack_node **a, t_stack_node **b, bool check)
+void	pb(t_stack_node **b, t_stack_node **a, bool check)
 {
 	push(b, a);
 	if (!check)

@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:14:41 by dley              #+#    #+#             */
-/*   Updated: 2024/02/14 15:18:23 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 13:38:56 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_stack_node	*find_min(t_stack_node *stack)
 	min = LONG_MAX;
 	while (stack)
 	{
-		if (stack->nbr > min)
+		if (stack->nbr < min)
 		{	
 			min = stack->nbr;
 			min_node = stack;
