@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:31:25 by dley              #+#    #+#             */
-/*   Updated: 2024/02/28 13:35:42 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 16:40:45 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	set_target(t_stack_node *a, t_stack_node *b)
 			current_a = current_a->next;
 		}
 		if (best_target == LONG_MAX)
-			b->target_node = find_max(a);
+			b->target_node = find_min(a);
 		else
 			b->target_node = target_node;
 		b = b->next;

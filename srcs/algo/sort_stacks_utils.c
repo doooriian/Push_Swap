@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:45 by dley              #+#    #+#             */
-/*   Updated: 2024/02/28 13:39:27 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 16:41:03 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	rotate_both(t_stack_node **a, t_stack_node **b,
 					t_stack_node *cheapest_node)
 {
-	while (*b != cheapest_node && *a != cheapest_node->target_node)
+	while (*a != cheapest_node && *b != cheapest_node->target_node)
 		rr(a, b, false);
 	set_current_position(*a);
 	set_current_position(*b);
@@ -24,7 +24,7 @@ void	rotate_both(t_stack_node **a, t_stack_node **b,
 void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
 					t_stack_node *cheapest_node)
 {
-	while (*b != cheapest_node && *a != cheapest_node->target_node)
+	while (*a != cheapest_node && *b != cheapest_node->target_node)
 		rrr(a, b, false);
 	set_current_position(*a);
 	set_current_position(*b);

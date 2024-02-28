@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 17:29:27 by dley              #+#    #+#             */
-/*   Updated: 2024/02/28 13:41:39 by dley             ###   ########.fr       */
+/*   Updated: 2024/02/28 15:32:21 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 
 	len_a = stack_len(*a);
 	pb (b, a, false);
+	len_a--;
 	if (len_a-- > 3)
 		pb (b, a, false);
 	while (len_a > 3 && !(is_sorted(*a)))
