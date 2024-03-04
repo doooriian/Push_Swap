@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:56:58 by dley              #+#    #+#             */
-/*   Updated: 2024/02/14 14:22:07 by dley             ###   ########.fr       */
+/*   Updated: 2024/03/04 11:03:36 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void			rev_rotate_both(t_stack_node **a, t_stack_node **b,
 void			push_a_to_b(t_stack_node **a, t_stack_node **b);
 void			push_b_to_a(t_stack_node **a, t_stack_node **b);
 void			min_on_top(t_stack_node **a);
-
 
 void			sa(t_stack_node **a, bool print);
 void			sb(t_stack_node **b, bool print);
