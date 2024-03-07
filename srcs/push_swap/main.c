@@ -6,12 +6,11 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:07:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/28 17:03:55 by dley             ###   ########.fr       */
+/*   Updated: 2024/03/07 10:50:25 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-#include <stdio.h>	
 
 int	main(int argc, char **argv)
 {
