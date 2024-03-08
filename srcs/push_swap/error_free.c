@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:29:11 by dley              #+#    #+#             */
-/*   Updated: 2024/02/14 14:16:09 by dley             ###   ########.fr       */
+/*   Updated: 2024/03/08 12:48:58 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	free_error(t_stack_node **stack_a, char **argv, bool argc_is_2)
 {
 	free_stack(stack_a);
 	if (argc_is_2)
-		free(argv);
+		free_new_argv(argv);
 	write(2, "Error\n", 6);
 	exit(1);
 }

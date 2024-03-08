@@ -6,7 +6,7 @@
 /*   By: dley <dley@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 14:35:43 by dley              #+#    #+#             */
-/*   Updated: 2024/02/28 15:32:11 by dley             ###   ########.fr       */
+/*   Updated: 2024/03/08 13:09:45 by dley             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ void	set_cheapest(t_stack_node *stack)
 
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
+	a->cheapest = false;
 	set_current_position(a);
 	set_current_position(b);
 	set_target_node(a, b);
